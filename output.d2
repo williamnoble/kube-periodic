@@ -1,13 +1,3 @@
-classes.DaemonSet.style.fill: "#fff"
-classes.DaemonSet.style.font-size: 40
-classes.DaemonSet.style.font: Mono
-classes.DaemonSet.style.border-radius: 6
-classes.DaemonSet.style.stroke-width: 0
-classes.Job.style.fill: "#fff"
-classes.Job.style.font-size: 40
-classes.Job.style.font: Mono
-classes.Job.style.border-radius: 6
-classes.Job.style.stroke-width: 0
 classes.Deployment.style.fill: "#fff"
 classes.Deployment.style.font-size: 40
 classes.Deployment.style.font: Mono
@@ -18,6 +8,16 @@ classes.StatefulSet.style.font-size: 40
 classes.StatefulSet.style.font: Mono
 classes.StatefulSet.style.border-radius: 6
 classes.StatefulSet.style.stroke-width: 0
+classes.DaemonSet.style.fill: "#fff"
+classes.DaemonSet.style.font-size: 40
+classes.DaemonSet.style.font: Mono
+classes.DaemonSet.style.border-radius: 6
+classes.DaemonSet.style.stroke-width: 0
+classes.Job.style.fill: "#fff"
+classes.Job.style.font-size: 40
+classes.Job.style.font: Mono
+classes.Job.style.border-radius: 6
+classes.Job.style.stroke-width: 0
 classes.base.style.fill: "#fff"
 classes.base.style.font-size: 40
 classes.base.style.font: Mono
@@ -33,6 +33,26 @@ table: "" {
   style.stroke-width: 0
   style.stroke-dash: 5
   style.fill: white
+  kube-system: "" {
+    grid-columns: 1
+    grid-gap: 5
+    style.fill: white
+    style.stroke-width: 0
+    Co.class: Deployment
+    Hi.class: Job
+    Hi.class: Job
+    Lp.class: Deployment
+    Ms.class: Deployment
+    St.class: DaemonSet
+    Tr.class: Deployment
+    kube-system.label: "k\nu\nb\ne\n-\ns\ny\ns\nt\ne\nm"
+    kube-system.style.font-size: 40
+    kube-system.style.font-color: black
+    kube-system.style.stroke-width: 1
+    kube-system.style.stroke-dash: 5
+    kube-system.style.fill: "linear-gradient(#ffe5e5, #ff9999)"
+    kube-system.class: [base; block]
+  }
   argocd: "" {
     grid-columns: 1
     grid-gap: 5
@@ -60,26 +80,6 @@ table: "" {
     argocd.style.fill: "linear-gradient(#ebf3fa, #cfe2f3)"
     argocd.class: [base; block]
   }
-  kube-system: "" {
-    grid-columns: 1
-    grid-gap: 5
-    style.fill: white
-    style.stroke-width: 0
-    Co.class: Deployment
-    Hi.class: Job
-    Hi.class: Job
-    Lp.class: Deployment
-    Ms.class: Deployment
-    St.class: DaemonSet
-    Tr.class: Deployment
-    kube-system.label: "k\nu\nb\ne\n-\ns\ny\ns\nt\ne\nm"
-    kube-system.style.font-size: 40
-    kube-system.style.font-color: black
-    kube-system.style.stroke-width: 1
-    kube-system.style.stroke-dash: 5
-    kube-system.style.fill: "linear-gradient(#ffe5e5, #ff9999)"
-    kube-system.class: [base; block]
-  }
   default: "" {
     grid-columns: 1
     grid-gap: 5
@@ -97,6 +97,7 @@ table: "" {
 }
 spacer: "" {
   style.stroke-width: 0
+  style.fill: white
   width: 50
 }
 key: {

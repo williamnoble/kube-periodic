@@ -97,6 +97,7 @@ func buildGraph(workloads map[string][]Workload) {
 	graph, _, _ = d2oracle.Create(graph, nil, "spacer")
 	graph, _ = d2oracle.Set(graph, nil, fmt.Sprintf("%s.label", spacerKey), nil, &empty)
 	graph, _ = d2oracle.Set(graph, nil, fmt.Sprintf("%s.style.stroke-width", spacerKey), nil, ptr.To("0"))
+	graph, _ = d2oracle.Set(graph, nil, fmt.Sprintf("%s.style.fill", spacerKey), nil, ptr.To("white"))
 	graph, _ = d2oracle.Set(graph, nil, fmt.Sprintf("%s.width", spacerKey), nil, ptr.To("50"))
 
 	//<!-- Parent Container (Key) -->

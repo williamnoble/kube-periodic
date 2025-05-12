@@ -1,0 +1,63 @@
+# base styling for each element (workload)
+classes.base.style.fill: "#fff"
+classes.base.style.font-size: 40
+classes.base.style.font: Mono
+classes.base.style.border-radius: 6
+classes.base.style.stroke-width: 0
+
+# styling for specific workload type
+classes.StatefulSet.style.fill: "#6667AB"
+classes.DaemonSet.style.fill: "#FFBE98"
+classes.Deployment.style.fill: "#88B04B"
+
+table {
+  label: Cluster
+  grid-columns: 2 # n namespaces
+  grid-gap: 0
+  style.stroke-width: 0
+  style.fill: white
+
+  argocd: {
+  	style.stroke-width: 0
+  	style.fill: white
+    label: ""
+    grid-columns: 1
+    grid-gap: 5
+	namespace: {
+      class: [base; block]
+      style.font-size: 40
+      label: "n\na\nm\ne\ns\np\na\nc\ne"
+      style: {
+        fill: lightcyan
+      }
+    }
+
+    Ap {
+      class: [base; StatefulSet]
+    }
+    Aa.class: [base; StatefulSet]
+    Pp.class: [base; StatefulSet]
+    Ad.class: [base; Deployment]
+    An.class: [base; Deployment]
+    Ar.class: [base; Deployment]
+    Ar.class: [base; Deployment]
+    As.class: [base; Deployment]
+    Ng.class: [base; Deployment]
+    Pg.class: [base; Deployment]
+    Pk.class: [base; Deployment]
+    Pk.class: [base; Deployment]
+	Ng.class: [base; Deployment]
+  }
+  kube-system: foo {
+  	style.fill: white
+  	style.stroke-width: 0
+    label: ""
+    grid-columns: 1
+    grid-gap: 5
+    St.class: [base; DaemonSet]
+    Co.class: [base; Deployment]
+    Lp.class: [base; Deployment]
+    Ms.class: [base; Deployment]
+    Tr.class: [base; Deployment]
+  }
+}

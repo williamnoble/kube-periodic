@@ -1,0 +1,114 @@
+classes.DaemonSet.style.fill: "#fff"
+classes.DaemonSet.style.font-size: 40
+classes.DaemonSet.style.font: Mono
+classes.DaemonSet.style.border-radius: 6
+classes.DaemonSet.style.stroke-width: 0
+classes.Job.style.fill: "#fff"
+classes.Job.style.font-size: 40
+classes.Job.style.font: Mono
+classes.Job.style.border-radius: 6
+classes.Job.style.stroke-width: 0
+classes.Deployment.style.fill: "#fff"
+classes.Deployment.style.font-size: 40
+classes.Deployment.style.font: Mono
+classes.Deployment.style.border-radius: 6
+classes.Deployment.style.stroke-width: 0
+classes.StatefulSet.style.fill: "#fff"
+classes.StatefulSet.style.font-size: 40
+classes.StatefulSet.style.font: Mono
+classes.StatefulSet.style.border-radius: 6
+classes.StatefulSet.style.stroke-width: 0
+classes.base.style.fill: "#fff"
+classes.base.style.font-size: 40
+classes.base.style.font: Mono
+classes.base.style.border-radius: 6
+classes.base.style.stroke-width: 0
+classes.Deployment.style.fill: "#ACDDDE"
+classes.StatefulSet.style.fill: "#E1F8DC"
+classes.DaemonSet.style.fill: "#FEF8DD"
+classes.Job.style.fill: "#F7D8BA"
+table: "" {
+  grid-columns: 3
+  grid-gap: 0
+  style.stroke-width: 0
+  style.stroke-dash: 5
+  style.fill: white
+  argocd: "" {
+    grid-columns: 1
+    grid-gap: 5
+    style.fill: white
+    style.stroke-width: 0
+    Ap.class: StatefulSet
+    Aa.class: StatefulSet
+    Aa.class: Deployment
+    Ad.class: Deployment
+    An.class: Deployment
+    Ar.class: Deployment
+    Ar.class: Deployment
+    As.class: Deployment
+    Ng.class: Deployment
+    Pg.class: Deployment
+    Pk.class: Deployment
+    Pk.class: Deployment
+    Pp.class: StatefulSet
+    Pp.class: DaemonSet
+    argocd.label: "a\nr\ng\no\nc\nd"
+    argocd.style.font-size: 40
+    argocd.style.font-color: black
+    argocd.style.stroke-width: 1
+    argocd.style.stroke-dash: 5
+    argocd.style.fill: "linear-gradient(#ebf3fa, #cfe2f3)"
+    argocd.class: [base; block]
+  }
+  kube-system: "" {
+    grid-columns: 1
+    grid-gap: 5
+    style.fill: white
+    style.stroke-width: 0
+    Co.class: Deployment
+    Hi.class: Job
+    Hi.class: Job
+    Lp.class: Deployment
+    Ms.class: Deployment
+    St.class: DaemonSet
+    Tr.class: Deployment
+    kube-system.label: "k\nu\nb\ne\n-\ns\ny\ns\nt\ne\nm"
+    kube-system.style.font-size: 40
+    kube-system.style.font-color: black
+    kube-system.style.stroke-width: 1
+    kube-system.style.stroke-dash: 5
+    kube-system.style.fill: "linear-gradient(#ffe5e5, #ff9999)"
+    kube-system.class: [base; block]
+  }
+  default: "" {
+    grid-columns: 1
+    grid-gap: 5
+    style.fill: white
+    style.stroke-width: 0
+    Ge.class: Deployment
+    default.label: "d\ne\nf\na\nu\nl\nt"
+    default.style.font-size: 40
+    default.style.font-color: black
+    default.style.stroke-width: 1
+    default.style.stroke-dash: 5
+    default.style.fill: "linear-gradient(#ebf3fa, #cfe2f3)"
+    default.class: [base; block]
+  }
+}
+spacer: "" {
+  style.stroke-width: 0
+  width: 50
+}
+key: {
+  grid-gap: 10
+  grid-columns: 1
+  style.border-radius: 8
+  Deployment.style.border-radius: 8
+  Deployment.style.fill: "#ACDDDE"
+  StatefulSet.style.border-radius: 8
+  StatefulSet.style.fill: "#E1F8DC"
+  DaemonSet.style.border-radius: 8
+  DaemonSet.style.fill: "#FEF8DD"
+  Job.style.border-radius: 8
+  Job.style.fill: "#F7D8BA"
+}

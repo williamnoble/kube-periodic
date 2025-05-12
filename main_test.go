@@ -27,9 +27,9 @@ func TestStringFormatter(t *testing.T) {
 }
 
 func TestInsertNewline(t *testing.T) {
-	expected := "f\no\no\n"
+	expected := "f\no\no"
 	actual := insertNewline("foo")
-	if strings.EqualFold(expected, *actual) {
+	if !strings.EqualFold(expected, *actual) {
 		t.Errorf("expected %s, got %s", expected, *actual)
 	}
 }
